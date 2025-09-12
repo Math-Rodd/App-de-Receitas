@@ -1,7 +1,5 @@
 # 🩸 Culinária Macabra
 
-![Culinária Macabra](https://via.placeholder.com/800x200.png?text=Culin%C3%A1ria+Macabra)
-
 ## Descrição
 
 Bem-vindo ao **App de Receitas mais assustador da web!**  

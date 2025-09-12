@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Receitas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <h1>Culinária Macabra</h1>
+        <h2 class="slogan">“Receitas que vão te arrepiar… literalmente!”</h2>
+
+        
+
+        <!-- Botão para adicionar nova receita -->
+        <button id="add-recipe-btn">➕ Adicionar Receita</button>
+
+        <!-- Campo de busca -->
+        <input type="text" id="search-input" placeholder="Buscar por nome ou ingrediente...">
+
+        <div class="category-filters">
+            <button data-category="all" class="filter-btn active">Todas</button>
+            <button data-category="Café da manhã" class="filter-btn">Café da manhã</button>
+            <button data-category="Almoço" class="filter-btn">Almoço</button>
+            <button data-category="Jantar" class="filter-btn">Jantar</button>
+            <button data-category="Sobremesa" class="filter-btn">Sobremesa</button>
+            <button data-category="Lanche" class="filter-btn">Lanche</button>
+        </div>
+
+        <!-- Lista de receitas -->
+        <div id="recipes-list"></div>
+    </div>
+
+    <!-- Modal para adicionar/editar receita -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nova Receita</h2>
+            <input type="text" id="recipe-name" placeholder="Nome da receita">
+            <textarea id="recipe-ingredients" placeholder="Ingredientes (separados por vírgula)"></textarea>
+            <select id="recipe-category">
+                <option value="">Selecione a categoria</option>
+                <option value="Café da manhã">Café da manhã</option>
+                <option value="Almoço">Almoço</option>
+                <option value="Jantar">Jantar</option>
+                <option value="Sobremesa">Sobremesa</option>
+                <option value="Lanche">Lanche</option>
+            </select>
+            <textarea id="recipe-steps" placeholder="Modo de preparo"></textarea>
+            <input type="file" id="recipe-image">
+            <button id="save-recipe">Salvar Receita</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

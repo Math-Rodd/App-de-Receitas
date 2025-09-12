@@ -11,8 +11,7 @@ O aplicativo permite:
 - Selecionar a **categoria** da receita (Café da manhã, Almoço, Jantar, Sobremesa, Lanche) 🥐🍲🍰  
 - Buscar receitas por **nome ou ingrediente** 🔍  
 - Filtrar receitas por **categoria** ✅  
-- Excluir receitas facilmente 🗑️  
-- Ativar o **Dark Mode extremo** 🌙🩸  
+- Excluir receitas facilmente 🗑️   
 - Explorar **animações góticas e efeitos sombrios** 🎨  
 
 O app utiliza **LocalStorage**, mantendo os dados mesmo após atualizar ou fechar a página.

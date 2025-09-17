@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados da pesquisa</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados para "{{ query }}"</h1>
+        {% if receitas %}
+            <div class="receitas-grid">
+                {% for receita in receitas %}
+                    <div class="receita-card">
+                        <h2>{{ receita.titulo }}</h2>
+                        {% if receita.imagem %}
+                        <img src="{{ receita.imagem.url }}" alt="{{ receita.titulo }}">
+                        {% endif %}
+                        <p>{{ receita.ingredientes|truncatechars:100 }}</p>
+                        <a href="{% url 'detalhes_receita' receita.id %}">Ver Receita</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>Nenhuma receita encontrada.</p>
+        {% endif %}
+        <a href="{% url 'index' %}">⬅️ Voltar</a>
+    </div>
+</body>
+</html>

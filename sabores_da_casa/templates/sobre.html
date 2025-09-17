@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sobre</h1>
+        <p>O Sabores da Casa é um site para compartilhar receitas deliciosas e práticas!</p>
+        <a href="{% url 'index' %}">Voltar</a>
+
+        <section class="sobre-texto">
+            <p>Bem-vindo ao <strong>Sabores da Casa</strong>, o espaço onde a culinária ganha vida e cada receita conta
+                uma história! 🍲</p>
+
+            <p>Aqui, acreditamos que cozinhar é mais do que preparar alimentos — é criar momentos, compartilhar
+                experiências e despertar memórias afetivas à mesa. Nossa missão é trazer receitas simples, deliciosas e
+                inspiradoras para sua cozinha, seja você um iniciante ou um chef experiente.</p>
+
+            <p>Navegue pelas nossas categorias, descubra novos sabores e permita-se experimentar combinações que vão
+                tornar suas refeições ainda mais especiais. E lembre-se: cada receita aqui foi escolhida com carinho,
+                pensando em sabor, praticidade e prazer de cozinhar.</p>
+
+            <p><em>“Cozinhar é uma forma de amar quem você serve.”</em> ❤️</p>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{% extends 'receitas/base.html' %}
+{% block title %}Contato - Sabores da Casa{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-10 mt-10 mb-10">
+    <h2 class="text-4xl font-extrabold mb-6 text-orange-700 drop-shadow text-center">Fale Conosco</h2>
+    <p class="text-lg text-orange-900 mb-8 text-center">
+        Tem dúvidas, sugestões, elogios ou quer compartilhar sua receita com a gente? Preencha o formulário abaixo ou envie um e-mail para <a href="mailto:contato@saboresdacasa.com" class="text-orange-600 underline">contato@saboresdacasa.com</a>. Adoramos ouvir nossos visitantes!
+    </p>
+    <form class="space-y-6">
+        <div>
+            <label for="nome" class="block text-orange-700 font-semibold mb-2">Nome</label>
+            <input type="text" id="nome" name="nome" class="w-full p-3 rounded-lg border border-orange-200 focus:ring-2 focus:ring-orange-400 focus:outline-none bg-orange-50" placeholder="Seu nome">
+        </div>
+        <div>
+            <label for="email" class="block text-orange-700 font-semibold mb-2">E-mail</label>
+            <input type="email" id="email" name="email" class="w-full p-3 rounded-lg border border-orange-200 focus:ring-2 focus:ring-orange-400 focus:outline-none bg-orange-50" placeholder="seu@email.com">
+        </div>
+        <div>
+            <label for="mensagem" class="block text-orange-700 font-semibold mb-2">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" class="w-full p-3 rounded-lg border border-orange-200 focus:ring-2 focus:ring-orange-400 focus:outline-none bg-orange-50" placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
+            Enviar mensagem
+        </button>
+    </form>
+    <p class="text-center text-orange-600 mt-8">
+        Ou, se preferir, nos acompanhe nas redes sociais:<br>
+        <a href="#" class="mx-2 hover:text-orange-800"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="mx-2 hover:text-orange-800"><i class="fab fa-facebook"></i> Facebook</a>
+    </p>
+</div>
+{% endblock %}

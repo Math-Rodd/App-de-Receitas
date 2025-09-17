@@ -1,0 +1,26 @@
+{% extends 'receitas/base.html' %}
+{% block title %}{{ categoria|title }} - Sabores da Casa{% endblock %}
+
+{% block content %}
+<div class="text-center mt-12 mb-12">
+    <h2 class="text-4xl font-extrabold mb-8 text-orange-700 drop-shadow">
+        Receitas {{ categoria|title }}
+    </h2>
+    <div class="flex flex-wrap justify-center gap-6">
+        {% for receita in receitas %}
+            <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-orange-50 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                {% if receita.image %}
+                    <img src="{{ receita.image.url }}" alt="Imagem de {{ receita.title }}" class="w-full h-48 object-cover rounded-md mb-4 shadow">
+                {% endif %}
+                <h3 class="text-xl font-bold mb-2 text-orange-700">{{ receita.title }}</h3>
+                <p class="text-orange-900 mb-4">{{ receita.description|truncatewords:20 }}</p>
+                <a href="{% url 'receita_detail' receita.id %}" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full shadow transition-colors duration-300">
+                    Ver Receita &rarr;
+                </a>
+            </div>
+        {% empty %}
+            <p class="text-center text-orange-500 col-span-full">Nenhuma receita encontrada nesta categoria.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
